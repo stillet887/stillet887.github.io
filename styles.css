@@ -1,0 +1,249 @@
+@font-face {
+    font-family: Humster;
+    src: url(9914.ttf);
+}
+
+@font-face {
+    font-family: Section-name;
+    src: url(10672.ttf);
+}
+
+@font-face {
+    font-family: Normal;
+    src: url(10679.ttf);
+}
+
+body {
+    background: black;
+}
+
+.menu {
+    background: black;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: white;
+    font-family: Humster;
+    font-size: 28px;
+    transition: all 1s ease-out;
+    z-index: 2;
+}
+
+.menu [class$="item"]:hover {
+    color: orange;
+}
+
+.menu-hamster {
+    background: url(hamsters.png) no-repeat;
+    width: 165px;
+    height: 215px;
+    background-size: 666px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+}
+
+.locations {
+    height: 315px;
+    width: 480px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    transition: all 1s ease-out;
+}
+
+.info-item {
+    text-align: center;
+    width: 200px;
+    word-spacing: 60px;
+    position: absolute;
+    left: 5px;
+    top: 0;
+}
+
+.skills-item {
+    position: absolute;
+    right: 35px;
+    top: 20px;
+}
+
+.contacts-item {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20px;
+}
+
+.block {
+    height: 315px;
+    width: 480px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: black;
+    z-index: 2;
+    transition: all 1s ease-out;
+}
+
+.bar {
+    position: fixed;
+    top: 0;
+    width: calc(100% - 15px);
+    padding-top: 5px;
+    z-index: 1;
+}
+
+.bar .section-name {
+    font-family: Section-name;
+    text-align: center;
+    padding-bottom: 7px;
+    border-bottom: 1px solid black;
+    background: white;
+}
+
+.little-hamster {
+    background: url(hamsters.png)no-repeat 64% 0;
+    background-size: 320px;
+    width: 80px;
+    height: 100px;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+}
+
+.little-hamster:hover {
+    background-position: 97% 0;
+}
+
+.skills .container {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100px;
+    align-items: center;
+}
+
+.skills .skill {
+    filter: grayscale(100%);
+    margin-bottom: 100px;
+    text-align: center;
+}
+
+.skills .skill img {
+    width: 200px;
+}
+
+/*.skills .skill .info .rating {*/
+    /*background: url('rating.png') no-repeat;*/
+    /*height: 40px;*/
+    /*width: 100px;*/
+/*}*/
+
+.skills .skill .info .rating::after {
+    content: '';
+    width: 50%;
+    background: orange;
+}
+
+
+.skills .skill .info {
+    font-family: Normal;
+    color: white;
+    /*display: flex;*/
+    align-items: center;
+
+    display: inline-block;
+    width: 1px;
+    opacity: 0;
+    overflow: hidden;
+    max-height: 250px;
+    transition: opacity 0.2s ease-out 0.1s;
+    transition: width 0.2s ease-out;
+}
+
+.skill .description {
+    color: white;
+    font-size: 28px;
+}
+
+.skills .skill:hover {
+    filter: none;
+}
+
+.skills .skill:hover .info {
+    width: 250px;
+    opacity: 1;
+}
+
+.skill .lvl {
+    width: 250px;
+    height: 75px;
+    background: rgba(225, 225, 225, 0.2) url('rating.png') no-repeat;
+    background-size: 250px;
+}
+
+.skill .lvl::after {
+    content: "";
+    display: block;
+    height: 75px;
+    background-color: orange;
+    position: relative;
+    z-index: -1;
+}
+
+.skill.high .lvl::after {
+    width: 194px;
+}
+
+.skill.middle .lvl::after {
+    width: 147px;
+}
+
+.skill.low .lvl::after {
+    width: 100px;
+}
+
+.content {
+    margin-top: 200px;
+}
+
+.info {
+    color: white;
+    max-width: 1000px;
+    padding: 0 30px;
+    margin: 0 auto;
+    font-size: 40px;
+}
+
+.info>div {
+    margin-bottom: 25px;
+}
+
+.info .title {
+    font-family: Section-name;
+    display: inline-block;
+    color: orange;
+}
+
+.info .description {
+    padding: 5px;
+    display: inline;
+    font-family: Normal;
+}
+
+.contacts {
+    color: white;
+    font-family: Normal;
+    margin: 0 auto;
+    width: 750px;
+}
+
+.contacts [class*='fa'] {
+    color: orange;
+}
